@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Grupo de solo lectura para Ventas -->
+        <record id="group_sale_readonly" model="res.groups">
+            <field name="name">Sales Read-Only User</field>
+            <field name="category_id" ref="sales_team.group_sale_salesman"/>
+        </record>
+
+        <!-- Regla de registros: permite leer todos los pedidos de venta -->
+        <record id="rule_sale_order_readonly" model="ir.rule">
+            <field name="name">Sale Order Readonly</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="groups" eval="[(4, ref('group_sale_readonly'))]"/>
+        </record>
+
+        <!-- Regla de registros: permite leer todas las líneas de pedido de venta -->
+        <record id="rule_sale_order_line_readonly" model="ir.rule">
+            <field name="name">Sale Order Line Readonly</field>
+            <field name="model_id" ref="sale.model_sale_order_line"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="groups" eval="[(4, ref('group_sale_readonly'))]"/>
+        </record>
+    </data>
+</odoo>

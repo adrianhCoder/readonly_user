@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data >
+    <!-- Añadimos el grupo a los menús principales de Ventas -->
+    <record id="sale.sale_menu_root" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+    </record>
+    <!-- <record id="sale.menu_sale_order" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+    </record> -->
+    <record id="sale.menu_sale_report" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+    </record>
+    <!-- Y todos los submenús que necesites -->
+    <!-- <record id="sale.menu_sale_report_all_quotations" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+    </record> -->
+  </data>
+</odoo>
