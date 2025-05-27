@@ -1,19 +1,28 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "Sales Read-Only Access",
-    "version": "17.0.1.0.0",
-    "summary": "Grupo de solo lectura para todo lo relacionado con Ventas",
-    "description": "Este módulo crea un grupo que solo puede leer todos los modelos de ventas (sale.order, sale.order.line, etc).",
+    "name": "Grupo de solo lectura",
+    "version": '17.0.1.0',
+    "summary": "Grupo de solo lectura ",
+    "description": "Este módulo crea un grupo que permite todas las vistas, pero los permisos de escritura se tendran que añadir manualmente.",
+    "license": "LGPL-3",
     "category": "Sales",
-    "author": "Tu Empresa",
-    "website": "https://www.tu_empresa.com",
-    "depends": ["sale"],
+    "author": "Adrianh De Lucio Chavero",
+    "website": "https://www.linkedin.com/in/adrianh-delucio-chavero/",
+    "depends": [
+        "sale", "crm",
+    ],
+
     "data": [
+
         "security/sale_readonly_security.xml",
-        "security/ir.model.access.csv",
+
+
         "security/sale_readonly_menu.xml",
+        
     ],
     "installable": True,
     "application": False,
     "auto_install": False,
 }
+
+

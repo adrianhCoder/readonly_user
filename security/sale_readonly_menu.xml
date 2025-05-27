@@ -5,15 +5,19 @@
     <record id="sale.sale_menu_root" model="ir.ui.menu">
       <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
     </record>
-    <!-- <record id="sale.menu_sale_order" model="ir.ui.menu">
-      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
-    </record> -->
     <record id="sale.menu_sale_report" model="ir.ui.menu">
       <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
     </record>
-    <!-- Y todos los submenús que necesites -->
-    <!-- <record id="sale.menu_sale_report_all_quotations" model="ir.ui.menu">
+    <!-- Nuevos menús agregados -->
+    <record id="stock.menu_stock_root" model="ir.ui.menu">
       <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
-    </record> -->
+    </record>
+    <record id="sale.menu_sale_quotations" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+    </record>
+    <record id="stock.menu_warehouse_report" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+    </record>
   </data>
 </odoo>
+  
