@@ -3,23 +3,23 @@
   <data >
     <!-- Añadimos el grupo a los menús principales de Ventas -->
     <record id="sale.sale_menu_root" model="ir.ui.menu">
-      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+      <field name="groups_id" eval="[(4, ref('readonly_user.group_readonly_user'))]"/>
     </record>
     <record id="sale.menu_sale_report" model="ir.ui.menu">
-      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+      <field name="groups_id" eval="[(4, ref('readonly_user.group_readonly_user'))]"/>
     </record>
     <!-- Nuevos menús agregados -->
     <record id="stock.menu_stock_root" model="ir.ui.menu">
-      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+      <field name="groups_id" eval="[(4, ref('readonly_user.group_readonly_user'))]"/>
     </record>
     <record id="sale.menu_sale_quotations" model="ir.ui.menu">
-      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+      <field name="groups_id" eval="[(4, ref('readonly_user.group_readonly_user'))]"/>
     </record>
     <record id="stock.menu_warehouse_report" model="ir.ui.menu">
-      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+      <field name="groups_id" eval="[(4, ref('readonly_user.group_readonly_user'))]"/>
     </record>
     <record id="purchase.menu_purchase_root" model="ir.ui.menu">
-      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+      <field name="groups_id" eval="[(4, ref('readonly_user.group_readonly_user'))]"/>
     </record>
   </data>
 </odoo>

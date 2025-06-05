@@ -2,8 +2,8 @@
 <odoo>
     <data>
         <!-- Grupo de solo lectura para Ventas -->
-        <record id="group_sale_readonly" model="res.groups">
-            <field name="name">Sales Read-Only User</field>
+        <record id="group_readonly_user" model="res.groups">
+            <field name="name">Read Only User</field>
             <field name="category_id" ref="sales_team.group_sale_salesman"/>
         </record>
 
@@ -15,7 +15,7 @@
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_unlink" eval="False"/>
-            <field name="group_id" ref="group_sale_readonly"/>
+            <field name="group_id" ref="group_readonly_user"/>
         </record>
 
         <!-- Regla de registros: permite leer todas las líneas de pedido de venta -->
@@ -26,7 +26,7 @@
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_unlink" eval="False"/>
-            <field name="group_id" ref="group_sale_readonly"/>
+            <field name="group_id" ref="group_readonly_user"/>
         </record>
 
         <record id="rule_crm_tag_readonly" model="ir.model.access">
@@ -36,7 +36,7 @@
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_unlink" eval="False"/>
-            <field name="group_id" ref="group_sale_readonly"/>
+            <field name="group_id" ref="group_readonly_user"/>
         </record>
 
         <record id="rule_mrp_bom_readonly" model="ir.model.access">
@@ -46,7 +46,7 @@
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_unlink" eval="False"/>
-            <field name="group_id" ref="group_sale_readonly"/>
+            <field name="group_id" ref="group_readonly_user"/>
         </record>
 
         <record id="rule_mrp_production_readonly" model="ir.model.access">
@@ -56,7 +56,7 @@
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_unlink" eval="False"/>
-            <field name="group_id" ref="group_sale_readonly"/>
+            <field name="group_id" ref="group_readonly_user"/>
         </record>
 
 
