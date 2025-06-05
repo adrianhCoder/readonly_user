@@ -18,6 +18,9 @@
     <record id="stock.menu_warehouse_report" model="ir.ui.menu">
       <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
     </record>
+    <record id="purchase.menu_purchase_root" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('sale_readonly.group_sale_readonly'))]"/>
+    </record>
   </data>
 </odoo>
   
